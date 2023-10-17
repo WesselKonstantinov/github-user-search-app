@@ -12,6 +12,7 @@ export default {
       "ghost-white": "hsl(227 100% 98%)",
       white: "hsl(0 0% 100%)",
       "hei-se-black": "hsl(220 40% 13%)",
+      infinity: "hsl(220 18% 16%)",
       "fainting-light": "hsl(222 41% 20%)",
     },
     fontFamily: {
@@ -31,14 +32,3 @@ export default {
   },
   plugins: [],
 };
-
-/* 
-11px
-13px
-14px
-15px
-16px
-18px
-22px
-26px
-*/
