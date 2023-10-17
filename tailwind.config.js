@@ -17,7 +17,28 @@ export default {
     fontFamily: {
       mono: ["Space Mono", "monospace"],
     },
+    fontSize: {
+      "3xs": "0.6875rem",
+      "2xs": "0.8125rem",
+      xs: "0.875rem",
+      sm: "0.9375rem",
+      base: "1rem",
+      lg: "1.25rem",
+      xl: "1.375rem",
+      "2xl": "1.625rem",
+    },
     extend: {},
   },
   plugins: [],
 };
+
+/* 
+11px
+13px
+14px
+15px
+16px
+18px
+22px
+26px
+*/
