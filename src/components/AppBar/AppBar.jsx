@@ -1,12 +1,11 @@
 import AppLabel from "../AppLabel/AppLabel";
-import VisuallyHidden from "../VisuallyHidden/VisuallyHidden";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 function AppBar() {
   return (
     <div className="flex justify-between items-center">
       <AppLabel>
-        devfinder <VisuallyHidden>(search for users on GitHub)</VisuallyHidden>
+        devfinder <span className="sr-only">(search for users on GitHub)</span>
       </AppLabel>
       <ThemeSwitcher />
     </div>
