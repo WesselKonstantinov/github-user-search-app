@@ -2,6 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    borderRadius: {
+      lg: "0.625rem",
+      "2xl": "0.9375rem",
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -28,7 +32,12 @@ export default {
       xl: "1.375rem",
       "2xl": "1.625rem",
     },
-    extend: {},
+    extend: {
+      spacing: {
+        4.5: "1.125rem",
+        9.5: "2.375rem",
+      },
+    },
   },
   plugins: [],
 };
