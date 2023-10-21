@@ -5,6 +5,7 @@ export default {
     borderRadius: {
       lg: "0.625rem",
       "2xl": "0.9375rem",
+      full: "50%",
     },
     colors: {
       transparent: "transparent",
@@ -32,9 +33,13 @@ export default {
       xl: "1.375rem",
       "2xl": "1.625rem",
     },
+    lineHeight: {
+      loose: "1.923",
+    },
     extend: {
       spacing: {
         4.5: "1.125rem",
+        8.5: "2.125rem",
         9.5: "2.375rem",
       },
     },
