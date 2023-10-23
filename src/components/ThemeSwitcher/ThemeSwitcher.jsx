@@ -1,6 +1,6 @@
 function ThemeSwitcher() {
   return (
-    <button className="inline-flex gap-x-4 font-bold tracking-[0.19em] uppercase">
+    <button className="inline-flex gap-x-4 text-san-marino dark:text-white font-bold tracking-[0.19em] uppercase">
       Dark
       <img
         src="/images/icon-moon.svg"
