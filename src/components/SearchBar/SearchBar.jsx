@@ -1,6 +1,6 @@
 function SearchBar() {
   return (
-    <form className="flex flex-wrap gap-2 pt-[0.40625rem] px-[0.4375rem] pb-[0.46875rem] mt-9 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
+    <form className="flex flex-wrap gap-2 pt-[0.40625rem] px-[0.4375rem] pb-[0.46875rem] bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
       <label htmlFor="search" className="sr-only">
         Search GitHub username:
       </label>
