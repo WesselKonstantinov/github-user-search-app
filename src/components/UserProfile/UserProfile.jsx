@@ -1,3 +1,4 @@
+import UserDetails from "../UserDetails/UserDetails";
 import UserStats from "../UserStats/UserStats";
 
 function LocationIcon() {
@@ -91,6 +92,16 @@ function UserProfile({
     { label: "followers", number: followers },
     { label: "following", number: following },
   ];
+  const userDetails = [
+    { name: "location", value: location, icon: <LocationIcon /> },
+    { name: "blog", value: blog, icon: <BlogIcon /> },
+    {
+      name: "twitter",
+      value: twitter_username,
+      icon: <TwitterIcon />,
+    },
+    { name: "company", value: company, icon: <CompanyIcon /> },
+  ];
 
   return (
     <div className="pt-8 px-6 pb-12 mt-4 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
@@ -117,36 +128,7 @@ function UserProfile({
         Quisque volutpat mattis eros.
       </p>
       <UserStats stats={userStats} />
-      <dl>
-        <div>
-          <dt className="sr-only">Location:</dt>
-          <dd>
-            <LocationIcon />
-            San Francisco
-          </dd>
-        </div>
-        <div>
-          <dt className="sr-only">Blog:</dt>
-          <dd>
-            <BlogIcon />
-            <a href="#">https://github.blog</a>
-          </dd>
-        </div>
-        <div>
-          <dt className="sr-only">Twitter username:</dt>
-          <dd>
-            <TwitterIcon />
-            Not Available
-          </dd>
-        </div>
-        <div>
-          <dt className="sr-only">Company:</dt>
-          <dd>
-            <CompanyIcon />
-            @github
-          </dd>
-        </div>
-      </dl>
+      <UserDetails details={userDetails} />
     </div>
   );
 }
