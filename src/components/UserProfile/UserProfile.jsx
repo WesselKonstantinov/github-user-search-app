@@ -1,21 +1,36 @@
-function UserProfile() {
+function UserProfile({
+  user: {
+    avatar_url,
+    bio,
+    blog,
+    company,
+    created_at,
+    followers,
+    following,
+    location,
+    login,
+    name,
+    public_repos,
+    twitter_username,
+  },
+}) {
   return (
     <div className="pt-8 px-6 pb-12 mt-4 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
       <header className="flex flex-row-reverse justify-end items-center gap-5">
         <div className="grid gap-1.5">
           <hgroup>
             <h2 className="text-anchors-aweigh dark:text-white text-base font-bold">
-              The Octocat
+              {name ? name : login}
             </h2>
-            <p className="text-blue">@octocat</p>
+            <p className="text-blue">@{login}</p>
           </hgroup>
           <p className="text-searching-blue dark:text-white">
             Joined 25 Jan 2011
           </p>
         </div>
         <img
-          src="https://avatars.githubusercontent.com/u/583231?v=4"
-          alt=""
+          src={avatar_url}
+          alt={`Avatar of ${name}`}
           className="w-[4.375rem] h-[4.375rem] rounded-full"
         />
       </header>
