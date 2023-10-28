@@ -1,3 +1,5 @@
+import UserStats from "../UserStats/UserStats";
+
 function UserProfile({
   user: {
     avatar_url,
@@ -14,13 +16,20 @@ function UserProfile({
     twitter_username,
   },
 }) {
+  const userName = name || login;
+  const userStats = [
+    { label: "repos", number: public_repos },
+    { label: "followers", number: followers },
+    { label: "following", number: following },
+  ];
+
   return (
     <div className="pt-8 px-6 pb-12 mt-4 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
       <header className="flex flex-row-reverse justify-end items-center gap-5">
         <div className="grid gap-1.5">
           <hgroup>
             <h2 className="text-anchors-aweigh dark:text-white text-base font-bold">
-              {name ? name : login}
+              {userName}
             </h2>
             <p className="text-blue">@{login}</p>
           </hgroup>
@@ -30,7 +39,7 @@ function UserProfile({
         </div>
         <img
           src={avatar_url}
-          alt={`Avatar of ${name}`}
+          alt={`Avatar of ${userName}`}
           className="w-[4.375rem] h-[4.375rem] rounded-full"
         />
       </header>
@@ -38,29 +47,7 @@ function UserProfile({
         Lorem ipsum dolor sit amet, consectetuer adipscing elit. Donec odio.
         Quisque volutpat mattis eros.
       </p>
-      <ul
-        role="list"
-        className="mt-6 py-4.5 px-3.5 flex bg-ghost-white dark:bg-hei-se-black rounded-lg"
-      >
-        <li role="listitem" className="flex flex-col-reverse flex-1 gap-2">
-          <span className="text-base text-anchors-aweigh dark:text-white text-center font-bold">
-            8
-          </span>
-          <span className="text-3xs text-center font-normal">Repos</span>
-        </li>
-        <li role="listitem" className="flex flex-col-reverse flex-1 gap-2">
-          <span className="text-base text-anchors-aweigh dark:text-white text-center font-bold">
-            3938
-          </span>
-          <span className="text-3xs text-center font-normal">Followers</span>
-        </li>
-        <li role="listitem" className="flex flex-col-reverse flex-1 gap-2">
-          <span className="text-base text-anchors-aweigh dark:text-white text-center font-bold">
-            9
-          </span>
-          <span className="text-3xs text-center font-normal">Following</span>
-        </li>
-      </ul>
+      <UserStats stats={userStats} />
       <dl>
         <div>
           <dt className="sr-only">Location:</dt>
