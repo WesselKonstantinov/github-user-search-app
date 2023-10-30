@@ -1,15 +1,9 @@
-import useSWR from "swr";
+import useUser from "../../hooks/useUser";
 import UserDetails from "../UserDetails/UserDetails";
 import UserStats from "../UserStats/UserStats";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 function UserProfile() {
-  const {
-    data: user,
-    error,
-    isLoading,
-  } = useSWR("https://api.github.com/users/octocat", fetcher);
+  const { user, error, isLoading } = useUser("octocat");
 
   return (
     <>
