@@ -1,10 +1,16 @@
-function UserStats({ stats }) {
+function UserStats({ following, followers, publicRepos }) {
+  const userStats = [
+    { label: "repos", number: publicRepos },
+    { label: "followers", number: followers },
+    { label: "following", number: following },
+  ];
+
   return (
     <ul
       role="list"
       className="mt-6 py-4.5 px-3.5 flex bg-ghost-white dark:bg-hei-se-black rounded-lg"
     >
-      {stats.map((stat) => (
+      {userStats.map((stat) => (
         <li
           key={stat.label}
           role="listitem"
