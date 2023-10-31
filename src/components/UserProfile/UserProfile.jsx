@@ -2,8 +2,8 @@ import useUser from "../../hooks/useUser";
 import UserDetails from "../UserDetails/UserDetails";
 import UserStats from "../UserStats/UserStats";
 
-function UserProfile() {
-  const { user, error, isLoading } = useUser("octocat");
+function UserProfile({ username }) {
+  const { user, error, isLoading } = useUser(username);
 
   return (
     <>
