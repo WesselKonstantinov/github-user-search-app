@@ -1,4 +1,11 @@
-function UserIntro({ name, login, avatar }) {
+function UserIntro({ name, login, avatar, joined }) {
+  const getFormattedDate = (date) =>
+    new Intl.DateTimeFormat("en-UK", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }).format(new Date(date));
+
   return (
     <header className="flex flex-row-reverse justify-end items-center gap-5">
       <div className="grid gap-1.5">
@@ -9,7 +16,7 @@ function UserIntro({ name, login, avatar }) {
           <p className="text-blue">@{login}</p>
         </hgroup>
         <p className="text-searching-blue dark:text-white">
-          Joined 25 Jan 2011
+          Joined <time dateTime={joined}>{getFormattedDate(joined)}</time>
         </p>
       </div>
       <img

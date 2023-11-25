@@ -17,6 +17,7 @@ function UserProfile({ username }) {
             name={user.name}
             login={user.login}
             avatar={user.avatar_url}
+            joined={user.created_at}
           />
           <UserBio bio={user.bio} />
           <UserStats
