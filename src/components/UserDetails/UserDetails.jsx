@@ -95,7 +95,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
   };
 
   return (
-    <ul role="list">
+    <ul role="list" className="mt-6">
       {userDetails.map((detail) => (
         <li
           key={detail.name}
