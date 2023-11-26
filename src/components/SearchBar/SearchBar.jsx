@@ -13,7 +13,7 @@ function SearchBar({ setUsername }) {
 
   return (
     <form
-      className="flex flex-wrap gap-2 pt-[0.40625rem] px-[0.4375rem] pb-[0.46875rem] bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none"
+      className="flex flex-wrap gap-2 pt-[0.40625rem] px-[0.4375rem] pb-[0.46875rem] md:py-[0.59375rem] md:px-2.5 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none"
       onSubmit={handleSubmit}
     >
       <label htmlFor="search" className="sr-only">
@@ -25,10 +25,10 @@ function SearchBar({ setUsername }) {
         name="query"
         value={query}
         placeholder="Search GitHub username..."
-        className="basis-0 grow-[999] min-w-[70%] py-2 pl-9.5 placeholder:text-san-marino placeholder:dark:text-white leading-loose bg-transparent bg-[url('/images/icon-search.svg')] bg-no-repeat bg-[left_0.5625rem_top_50%] bg-[length:1.25rem_1.25rem]"
+        className="basis-0 grow-[999] min-w-[70%] py-2 pl-9.5 md:pl-[4.375rem] placeholder:text-san-marino placeholder:dark:text-white leading-loose md:leading-snug bg-transparent bg-[url('/images/icon-search.svg')] bg-no-repeat bg-[left_0.5625rem_top_50%] md:bg-[left_1.375rem_top_50%] bg-[length:1.25rem_1.25rem] md:bg-[length:1.5rem_1.5rem] md:text-lg"
         onChange={handleChange}
       />
-      <button className="grow basis-23 py-3 pr-3.5 pl-4.5 text-xs font-bold text-white bg-blue rounded-lg">
+      <button className="grow basis-23 py-3 pr-3.5 pl-4.5 md:px-6 text-xs md:text-base font-bold text-white bg-blue rounded-lg">
         Search
       </button>
     </form>

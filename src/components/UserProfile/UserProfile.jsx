@@ -11,7 +11,7 @@ function UserProfile({ username }) {
       {error && <p>Failed to load.</p>}
       {isLoading && <p>Loading...</p>}
       {user && (
-        <div className="pt-8 px-6 pb-12 mt-4 grid grid-cols-2 gap-6 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
+        <div className="pt-8 px-6 pb-12 md:p-10 mt-4 md:mt-6 grid grid-cols-2 gap-6 md:gap-8 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
           <UserIntro
             name={user.name}
             login={user.login}

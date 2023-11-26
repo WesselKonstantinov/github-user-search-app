@@ -8,18 +8,18 @@ function UserStats({ following, followers, publicRepos }) {
   return (
     <ul
       role="list"
-      className="py-4.5 px-3.5 flex col-span-2 bg-ghost-white dark:bg-hei-se-black rounded-lg"
+      className="py-4.5 md:py-4 px-3.5 md:px-8 flex col-span-2 bg-ghost-white dark:bg-hei-se-black rounded-lg"
     >
       {userStats.map((stat) => (
         <li
           key={stat.label}
           role="listitem"
-          className="flex flex-col-reverse flex-1 gap-2"
+          className="flex flex-col-reverse flex-1 gap-2 md:gap-0 text-center md:text-left"
         >
-          <span className="text-base text-anchors-aweigh dark:text-white text-center font-bold">
+          <span className="text-base md:text-1.5xl text-anchors-aweigh dark:text-white font-bold">
             {stat.number}
           </span>
-          <span className="text-3xs text-center capitalize font-normal">
+          <span className="text-3xs md:text-2xs capitalize font-normal">
             {stat.label}
           </span>
         </li>
