@@ -105,7 +105,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
   return (
     <ul
       role="list"
-      className="mt-6 grid gap-4 md:grid-cols-2 md:grid-rows-2 md:grid-flow-col"
+      className="grid gap-4 col-span-2 md:grid-cols-2 md:grid-rows-2 md:grid-flow-col"
     >
       {userDetails.map((detail) => (
         <li

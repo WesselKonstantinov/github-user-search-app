@@ -1,5 +1,4 @@
 import useUser from "../../hooks/useUser";
-import UserBio from "../UserBio/UserBio";
 import UserDetails from "../UserDetails/UserDetails";
 import UserIntro from "../UserIntro/UserIntro";
 import UserStats from "../UserStats/UserStats";
@@ -12,14 +11,14 @@ function UserProfile({ username }) {
       {error && <p>Failed to load.</p>}
       {isLoading && <p>Loading...</p>}
       {user && (
-        <div className="pt-8 px-6 pb-12 mt-4 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
+        <div className="pt-8 px-6 pb-12 mt-4 grid grid-cols-2 gap-6 bg-white dark:bg-fainting-light rounded-2xl shadow-[0_1rem_1.875rem_-0.625rem_rgba(70,96,187,0.2)] dark:shadow-none">
           <UserIntro
             name={user.name}
             login={user.login}
+            bio={user.bio}
             avatar={user.avatar_url}
             joined={user.created_at}
           />
-          <UserBio bio={user.bio} />
           <UserStats
             followers={user.followers}
             following={user.following}

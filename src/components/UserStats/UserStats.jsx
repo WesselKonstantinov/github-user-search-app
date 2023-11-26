@@ -8,7 +8,7 @@ function UserStats({ following, followers, publicRepos }) {
   return (
     <ul
       role="list"
-      className="mt-6 py-4.5 px-3.5 flex bg-ghost-white dark:bg-hei-se-black rounded-lg"
+      className="py-4.5 px-3.5 flex col-span-2 bg-ghost-white dark:bg-hei-se-black rounded-lg"
     >
       {userStats.map((stat) => (
         <li
