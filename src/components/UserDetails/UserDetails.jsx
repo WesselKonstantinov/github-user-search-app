@@ -120,6 +120,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
               href={getLinkFromUserDetail(detail.name, detail.value)}
               rel="noopener noreferrer"
               target="_blank"
+              className="hover:underline focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-4 focus-visible:outline-offset-2 dark:focus-visible:outline-white"
             >
               {detail.value}
             </a>
