@@ -12,6 +12,7 @@ export default {
       transparent: "transparent",
       current: "currentColor",
       blue: "hsl(212 100% 50%)",
+      "abi-blue": "hsl(212,100%, 69%)",
       "searching-blue": "hsl(217 20% 51%)",
       "san-marino": "hsl(217 35% 45%)",
       "anchors-aweigh": "hsl(217 21% 21%)",
