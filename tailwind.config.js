@@ -20,6 +20,7 @@ export default {
       "hei-se-black": "hsl(220 40% 13%)",
       infinity: "hsl(220 18% 16%)",
       "fainting-light": "hsl(222 41% 20%)",
+      "rip-van-periwinkle": "hsl(222, 44%, 70%)",
     },
     fontFamily: {
       mono: ["Space Mono", "monospace"],
