@@ -105,7 +105,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
   return (
     <ul
       role="list"
-      className="grid gap-4 col-span-2 md:grid-cols-2 md:grid-rows-2 md:grid-flow-col"
+      className="grid gap-4 col-span-2 lg:col-start-2 lg:col-end-3 md:grid-cols-2 md:grid-rows-2 md:grid-flow-col"
     >
       {userDetails.map((detail) => (
         <li
@@ -120,7 +120,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
               href={getLinkFromUserDetail(detail.name, detail.value)}
               rel="noopener noreferrer"
               target="_blank"
-              className="hover:underline focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-4 focus-visible:outline-offset-2 dark:focus-visible:outline-white"
+              className="hover:underline focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-white"
             >
               {detail.value}
             </a>

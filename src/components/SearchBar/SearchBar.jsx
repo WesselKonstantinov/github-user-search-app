@@ -25,10 +25,10 @@ function SearchBar({ setUsername }) {
         name="query"
         value={query}
         placeholder="Search GitHub username..."
-        className="basis-0 grow-[999] min-w-[70%] py-2 pl-9.5 md:pl-[4.375rem] placeholder:text-san-marino placeholder:dark:text-white leading-loose md:leading-snug bg-transparent bg-[url('/images/icon-search.svg')] bg-no-repeat bg-[left_0.5625rem_top_50%] md:bg-[left_1.375rem_top_50%] bg-[length:1.25rem_1.25rem] md:bg-[length:1.5rem_1.5rem] md:text-lg focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-4 dark:focus-visible:outline-white"
+        className="basis-0 grow-[999] min-w-[70%] py-2 pl-9.5 md:pl-[4.375rem] rounded-lg placeholder:text-san-marino placeholder:dark:text-white leading-loose md:leading-snug bg-transparent bg-[url('/images/icon-search.svg')] bg-no-repeat bg-[left_0.5625rem_top_50%] md:bg-[left_1.375rem_top_50%] bg-[length:1.25rem_1.25rem] md:bg-[length:1.5rem_1.5rem] md:text-lg focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-2 dark:focus-visible:outline-white"
         onChange={handleChange}
       />
-      <button className="grow basis-23 py-3 pr-3.5 pl-4.5 md:px-6 text-xs md:text-base font-bold text-white bg-blue hover:bg-abi-blue rounded-lg transition-colors focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-4 focus-visible:outline-offset-2 dark:focus-visible:outline-white">
+      <button className="grow basis-23 py-3 pr-3.5 pl-4.5 md:px-6 text-xs md:text-base font-bold text-white bg-blue hover:bg-abi-blue rounded-lg transition-colors focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-white">
         Search
       </button>
     </form>
