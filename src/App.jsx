@@ -14,7 +14,7 @@ function App() {
         <AppHeader />
         <main className="mt-9">
           <h1 className="sr-only">GitHub user search app</h1>
-          <SearchBar setUsername={setUsername} />
+          <SearchBar username={username} setUsername={setUsername} />
           <UserProfile username={username} />
         </main>
       </Center>
