@@ -18,7 +18,7 @@ function useUser(username) {
     fetcher,
     {
       errorRetryCount: 0,
-      revalidateOnFocus: false,
+      keepPreviousData: true,
     }
   );
 
