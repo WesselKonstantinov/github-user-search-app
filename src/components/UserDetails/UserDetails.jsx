@@ -123,6 +123,7 @@ function UserDetails({ blog, company, location, twitterUsername }) {
               className="break-all hover:underline focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-white"
             >
               {detail.value}
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           ) : (
             <span>Not Available</span>

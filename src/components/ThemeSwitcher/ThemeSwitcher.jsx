@@ -74,17 +74,9 @@ function ThemeSwitcher() {
       className="inline-flex items-center gap-x-4 text-2xs text-san-marino hover:text-infinity dark:text-white dark:hover:text-rip-van-periwinkle focus-visible:outline focus-visible:outline-hei-se-black focus-visible:outline-2 focus-visible:outline-offset-4 dark:focus-visible:outline-white font-bold tracking-[0.19em] uppercase transition-colors"
       onClick={prefersDark ? setLightTheme : setDarkTheme}
     >
-      {prefersDark ? (
-        <>
-          Light
-          <SunIcon />
-        </>
-      ) : (
-        <>
-          Dark
-          <MoonIcon />
-        </>
-      )}
+      <span className="sr-only">Switch current theme to</span>
+      <span>{prefersDark ? "Light" : "Dark"}</span>
+      {prefersDark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
